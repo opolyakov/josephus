@@ -16,6 +16,7 @@ perl josephus.pl -n NUMBER -k NUMBER
 There is also GO program version - josephus.go .
 
 go build
+
 ./josephus -n NUMBER -k NUMBER
 
 
