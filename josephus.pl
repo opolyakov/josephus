@@ -18,15 +18,16 @@ for(my $i=1;$i<=$n;++$i) {
 	push @arr,$i;
 }
 # Processing
-for(my $i=0, my $j=1;;++$i,++$j) {
-	if ($i==$#arr+1) {
-		$i=0;
+for(my $count=0, my $j=1;@arr>1;++$count,++$j) {
+	# At the end of array - go to beginning
+	if ($count==$#arr+1) {
+		$count=0;
 	}
+	# Remove POI, restart j, decrement count
 	if ($j==$k) {
-		splice(@arr,$i,1);
+		splice(@arr,$count,1);
 		$j=0;
-		--$i;
+		--$count;
 	}
-	if (@arr==1) { last; }
 }
-foreach (@arr) { print $_."\n"; }
+print "$arr[0]\n"; 
