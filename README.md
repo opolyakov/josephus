@@ -20,3 +20,8 @@ go build
 ./josephus -n NUMBER -k NUMBER
 
 
+There is Python variant - josephus.py .
+
+
+python josephus.py -n NUMBER -k NUMBER
+
